@@ -1,3 +1,61 @@
+
+#quotes{
+  text-align:center;
+  font-weight:bold;
+}
+
+#firstquote{
+  color:green;
+  font-size:20px;
+  font-family: Arial;
+}
+
+#secondquote{
+  color:silver;
+  font-size:50px;
+  font-family: cursive;
+}
+
+#thirdquote{
+  color:teal;
+  font-size:10px;
+  font-family: fantasy;
+}
+
+.headerthreeparagraphs{
+  color: blue;
+}
+
+#firstlike{
+  font-size:20px;
+  color:red;
+  font-weight:700;
+  text-align:center;
+}
+
+#secondlike{
+  font-size:32px;
+  color:purple;
+  font-weight:300;
+  text-align:center;
+}
+
+#thirdlike{
+  font-size:50px;
+  font-weight:900;
+  color:green;
+  text-align:center;
+}
+
+#fourthlike{
+  font-size:16px;
+  color:orange;
+  font-weight:500;
+  text-align:center;
+}
+
+
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -15,6 +73,7 @@ footer .row {
 
 header h1 {
   font-weight: 700;
+  font-size:32px;
   margin: 0;
 }
 
@@ -31,7 +90,7 @@ header p {
 .jumbotron {
   display: flex;
   align-items: center;
-  background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/jumbotron.jpg');
+  background-image: url('https://d28htnjz2elwuj.cloudfront.net/wp-content/uploads/2016/02/12100323/UMD_greenlight_PR-01.jpg');
   background-size: cover;
   color: #ffffff;
   height: 500px;
@@ -62,7 +121,7 @@ section .row img {
 .btn.btn-primary {
   border-radius: 2px;
   border: 0px;
-  color: #fbd1d5;
+  color: black;
   text-shadow: none;
   background-color: #ffffff;
 }
