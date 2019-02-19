@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133939029-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<title>API Call - assignUser</title>
 
-  gtag('config', 'UA-133939029-1');
-</script>
-  <title>Web Development Assignment</title>
-  <meta charset="utf-8"/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="app.css">
-    <script src="paperjs/dist/paper-full.js" type="text/javascript" name="paperjs"></script>
-  <script src="app.js"></script>
-
-
-</script>
 </head>
 <body>
-  <div>
-<p>
-Choose a picture from your device or capture one with your camera now:
-</p>
-
 <label>Image File:</label><br/>
+
 <input type="file" id="imageLoader" name="imageLoader"/>
 <canvas id="imageCanvas"></canvas>
-</div>
+
+<script>
+   var imageLoader = document.getElementById('imageLoader');
+    imageLoader.addEventListener('change', handleImage, false);
+var canvas = document.getElementById('imageCanvas');
+var ctx = canvas.getContext('2d');
+
+
+function handleImage(e){
+    var reader = new FileReader();
+    reader.onload = function(event){
+        var img = new Image();
+        img.onload = function(){
+            canvas.width = 100;
+            canvas.height = 100;
+            ctx.drawImage(img,0,0);
+        };
+        img.src = event.target.result;
+    };
+    reader.readAsDataURL(e.target.files[0]);     
+}
+
+</script>
 </body>
 </html>
+            
